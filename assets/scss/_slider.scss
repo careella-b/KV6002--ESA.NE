@@ -1,0 +1,293 @@
+/*----------------------------------------*/
+/*  03. SLIDER CSS
+/*----------------------------------------*/
+
+.slider{
+    &__area{
+        & .slick-dots{
+            position: absolute;
+            bottom: 165px;
+            left: 50%;
+            z-index: 1;
+            @include transform(translateX(-50%));
+            & li{
+                display: inline-block;
+                & button{
+                    font-size: 0;
+                    width: 13px;
+                    height: 13px;
+                    background: #c2c2c2;
+                    @include border-radius(50%);
+                    margin: 0 7px;
+                    border: 2px solid transparent;
+                }
+                &.slick-active{
+                    & button{
+                        border-color: #bc8247;
+                        background: $white;
+                    }
+                }
+            }
+        }
+        & .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: $grey-4;
+            background-color: $white;
+            border:  1px solid $grey-2;
+            font-size: 0;
+            border-radius: 50%;
+            text-align: center;
+            -webkit-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translateY(-50%);
+            -webkit-transition: all .35s ease;
+            -o-transition: all .35s ease;
+            transition: all .35s ease;
+            font-size: 20px;
+            &:hover{
+                background: $theme-2-color;
+                color: $white;
+                border-color: $theme-2-color;
+            }
+        }
+        & .slick-arrow.slick-prev {
+            left: 10px;
+        }
+        & .slick-arrow.slick-next {
+            right: 10px;
+        }
+        &-2{
+            & .slick-dots{
+                bottom: 40px;
+            }
+        }
+        &-3{
+            & .slick-dots{
+                bottom: 40px;
+                & li{
+                    & button{
+                        border-color: transparent;
+                        background: transparent;
+                        width: 8px;
+                        height: 8px;
+                        background: #D1D0D1;
+                    }
+                }
+                & li.slick-active button {
+                    border-color: transparent;
+                    background: transparent;
+                    width: 30px;
+                    height: 7px;
+                    background: $theme-2-color;
+                    border-radius: 6px;
+                }
+            }
+            & .slide-video.slide-media {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+              }
+        }
+        &-4{
+            & .slick-dots{
+                bottom: 40px;
+            }   
+        }
+    }
+    &__height{
+        height: 925px;
+        @media #{$laptop}{
+            height: 750px;
+        }
+        @media #{$lg}{
+            height: 700px;
+        }
+        @media #{$md}{
+            height: 650px;
+        }
+        @media #{$sm}{
+            height: 600px;
+        }
+        @media #{$xs}{
+            height: 550px;
+        }
+        &-2{
+            height: 830px;
+            @media #{$laptop}{
+                height: 750px;
+            }
+            @media #{$lg}{
+                height: 700px;
+            }
+            @media #{$md}{
+                height: 650px;
+            }
+            @media #{$sm}{
+                height: 600px;
+            }
+            @media #{$xs}{
+                height: 550px;
+            }
+        }
+        &-4{
+            height: 535px;
+        }
+        &-5{
+            height: 950px;
+            @media #{$laptop}{
+                height: 900px;
+            }
+            @media #{$lg}{
+                height: 850px;
+            }
+            @media #{$md}{
+                height: 700px;
+            }
+            @media #{$sm}{
+                height: 750px;
+            }
+            @media #{$xs}{
+                height: 700px;
+            }
+        }
+        &-6{
+            height: 950px;
+            @media #{$laptop}{
+                height: 900px;
+            }
+            @media #{$lg}{
+                height: 850px;
+            }
+            @media #{$md}{
+                height: 650px;
+            }
+            @media #{$sm}{
+                height: 600px;
+            }
+            @media #{$xs}{
+                height: 600px;
+            }
+        }
+    }
+    &__content{
+        & h2{
+            font-weight: 600;
+            line-height: 1.2;
+            color: $black-2;
+            margin-bottom: 14px;
+            @media #{$xs}{
+                font-size: 30px;
+            }
+        }
+        & p{
+            margin-bottom: 45px;
+            color: $black-2;
+        }
+        &-3{
+            & p{
+                padding-right: 105px;
+                @media #{$laptop}{
+                    padding-right: 0;
+                }
+                @media #{$md}{
+                    padding-right: 40px;
+                }
+                @media #{$sm}{
+                    padding-right: 20px;
+                }
+                @media #{$xs}{
+                    padding-right: 0px;
+                }
+            }
+        }
+        &-black{
+            h2{
+                color: $white;
+            }
+            & p{
+                color: #fff;
+            }
+        }
+        &-4{
+            padding-left: 95px;
+            @media #{$lg}{
+                padding-left: 60px;
+            }
+            @media #{$md}{
+                padding-left: 40px;
+            }
+            @media #{$sm}{
+                padding-left: 30px;
+            }
+            @media #{$xs}{
+                padding-left: 20px;
+            }
+        }
+        &-5{
+            @media #{$xs} {
+                margin-top: 65px;
+            }
+            .meta{
+                color: $theme-2-color;
+            }
+            &  span{
+                padding: 0;
+                font-size: 13px;
+                display: inline-block;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: inline-block;
+                color: $black-2;
+            }
+            & h2{
+                font-size: 70px;
+                line-height: 70px;
+                margin: 0;
+                font-weight: 700;
+                @media #{$md} {
+                    font-size: 50px;
+                }
+                @media #{$xs,$sm} {
+                    font-size: 40px;
+                    line-height: 45px;
+                }
+            }
+            & p{
+                margin-top: 30px;
+                padding-right: 110px;
+                color: inherit;
+                margin-bottom: 35px;
+                @media #{$xs} {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.single-slider{
+    @include background();
+    @media #{$md}{
+        background-position: left;
+    }
+    @media #{$sm}{
+        background-position: left;
+    }
+    @media #{$xs}{
+        background-position: left;
+    }
+}

@@ -1,0 +1,78 @@
+/*----------------------------------------*/
+/*  09. TESTIMONIAL CSS
+/*----------------------------------------*/
+
+.testimonial{
+    &__area{
+        @include background();
+    }
+    &__nav{
+        margin: auto;
+        text-align: center;
+        width: 360px;
+        @media #{$xs}{
+            width: 300px;
+        }
+        &-thumb{
+            & img{
+                border: 4px solid $white;
+                @include border-radius(50%);
+                @include transform(scale(.7));
+                display: inline-block;
+                text-align: center;
+            }
+            &.slick-center{
+                & img{
+                    @include transform(scale(1));
+                }
+            }
+        }
+    }
+    &__wrapper{
+        & .slick-dots{
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            z-index: 1;
+            @include transform(translateX(-50%));
+            & li{
+                display: inline-block;
+                & button{
+                    font-size: 0;
+                    width: 13px;
+                    height: 13px;
+                    background: #c2c2c2;
+                    @include border-radius(50%);
+                    margin: 0 7px;
+                    border: 2px solid transparent;
+                }
+                &.slick-active{
+                    & button{
+                        border-color: #bc8247;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__item{
+        text-align: center;
+        & p{
+            color: $black-soft-2;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.avater__info{
+    & h6{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+    & span{
+        color: $theme-color;
+        text-transform: uppercase;
+    }
+}
