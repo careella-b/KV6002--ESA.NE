@@ -255,6 +255,7 @@ p {
 
 .footer-bg {
   background: #151616;
+  margin-top: -3px;
 }
 
 .dark-soft-bg {
@@ -4733,6 +4734,9 @@ p.checkout-coupon input[type=text] {
 /*----------------------------------------*/
 /*  09. SUBSCRIBE CSS START
 /*----------------------------------------*/
+.subscribe-bg {
+  background-color: #000;
+}
 .subscribe__inner {
   border-top: 1px solid #ebebeb;
 }
@@ -4742,6 +4746,7 @@ p.checkout-coupon input[type=text] {
 .subscribe__content h2 {
   font-weight: 400;
   margin-bottom: 15px;
+  color: #F4B908;
 }
 .subscribe__content p {
   padding: 0 60px;
@@ -5569,7 +5574,7 @@ p.checkout-coupon input[type=text] {
 /*----------------------------------------*/
 .footer__bottom {
   border-top: 1px solid #383838;
-  padding: 45px 0;
+  padding: 20px 0;
 }
 .footer__bottom.footer__bottom-2 {
   border-top: none;
@@ -5586,7 +5591,7 @@ p.checkout-coupon input[type=text] {
   padding: 30px 0;
 }
 .footer__widget-title h5 {
-  color: #ffffff;
+  color: #F4B908;
   margin-top: 10px;
   margin-bottom: 20px;
   text-transform: capitalize;
@@ -5595,8 +5600,12 @@ p.checkout-coupon input[type=text] {
   color: #201f1f;
 }
 .footer__widget-content p {
-  color: #b4b3b3;
+  color: #F4B908;
+  margin-top: 30px;
   margin-bottom: 25px;
+}
+.fa-facebook-f, .fa-instagram, .fa-twitter {
+  color: #F4B908;
 }
 .footer__widget-content .form-group .form-control {
   display: block;
@@ -5701,17 +5710,18 @@ p.checkout-coupon input[type=text] {
   opacity: 1;
 }
 .footer__links.footer__links-2 ul li a {
-  color: #515151;
+  color: #fff;
 }
 .footer__links.footer__links-2 ul li a::after {
   background: #201f1f;
 }
 .footer__links.footer__links-2 ul li a:hover {
-  color: #201f1f;
+  color: #fff;
 }
 .footer__copyright p {
+  font-size: 11px;
   margin-bottom: 0;
-  color: #b4b3b3;
+  color: #fff;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer__copyright p {
@@ -5729,7 +5739,7 @@ p.checkout-coupon input[type=text] {
   }
 }
 .footer__copyright p a {
-  color: #bc8246;
+  color: #F4B908;
 }
 .footer__copyright p .link {
   color: #8a8f6a;
@@ -5759,7 +5769,8 @@ p.checkout-coupon input[type=text] {
 }
 .footer__social ul li {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer__social ul li {
